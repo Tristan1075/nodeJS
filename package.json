@@ -18,12 +18,6 @@
   },
   "homepage": "https://github.com/Tristan1075/nodeJS#readme",
   "dependencies": {
-    "express": "^4.16.4",
-    "nodemon": "^1.18.10"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.3.4",
-    "@babel/node": "^7.2.2",
-    "@babel/preset-env": "^7.3.4"
+    "express": "^4.16.4"
   }
 }
