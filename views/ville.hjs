@@ -6,5 +6,7 @@
   </head>
   <body>
     <p>Welcome to {{ ville }}</p>
+    <br/>
+    <p>{{ description }}
   </body>
 </html>

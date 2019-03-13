@@ -8,8 +8,14 @@
     <h1>{{ title }}</h1>
     <p>Welcome to {{ title }}</p>
     <form action="/ville" method="post">
-        <label for="ville">City:</label>
+        <label for="nom_ville">City:</label>
+        <br/>
         <input type="text" id="nom_ville" name="nom_ville" required>
+        <br/><br/>
+        <label for="description">City's description:</label>
+        <br/>
+        <textarea id="description" name="description" rows="5" cols="33"></textarea>
+        <br/><br/>
         <input type="submit" value="Send">
     </form>
   </body>
