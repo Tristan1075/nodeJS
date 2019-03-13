@@ -5,8 +5,13 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <p>Welcome to {{ ville }}</p>
-    <br/>
-    <p>{{ description }}
+    <p>Welcome to <b>{{ ville }}</b></p>
+    {{#coord.longitude}}
+        <p>{{ description }}</p>
+        <iframe src="http://maps.google.com/maps?q={{ coord.latitude}}, {{ coord.longitude }}&z=15&output=embed" width="560" height="370" frameborder="0" style="border:0"></iframe>
+
+    {{/coord.longitude}}
+    {{#error}}<p style="color: red; font-weight: bold;">{{error}}</p>{{/error}}
+
   </body>
 </html>
