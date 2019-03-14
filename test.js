@@ -30,12 +30,13 @@ test('find city', async t => {
   }
 });
 
-test('verify if error', async t => {
+test('find city with nock if geocode down', async t => {
 
-  nock('hettp://geocode.xyz')
-    .get('/paris?json1')
-    .reply(200, 'HTML');
+  const city = 'Paris';
+  nock('http://geocode.xyz').get(`/${city}?json=1`).reply(200, { latt: 4 });
 
-  const res = await getVilleData();
-  t.is(res.status, 200);
+  const { data } = await axios.post('http://localhost:3000/ville', { city });
+  // Marche pas, je ne comprend pas ce que je récupère de data ..
+  console.log(data)
+  t.true(data.coord.includes('latt'));
 });
