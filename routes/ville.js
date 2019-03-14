@@ -4,12 +4,9 @@ const router = express.Router();
 
 router.post('/', function(req, res, next) {
 
-  axios.get('https://geocode.xyz/?locate=' + req.body.nom_ville + '&geoit=JSON&auth=172643766576427231494x1969')
+  axios.get('https://geocode.xyz/?locate=' + req.body.nom_ville + '&geoit=JSON&auth=743155780783642724266x1971')
     .then(geocode => {
-
       if(!geocode.data.error) {
-        console.log(geocode)
-
         res.render('ville', {
           ville: req.body.nom_ville,
           description: req.body.description,
